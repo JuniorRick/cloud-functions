@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    function:
+      #      this will pass the string through the pipes to all 3 methods in respective order
+      #      curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/
+      definition: uppercase|reverse|newLine
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
